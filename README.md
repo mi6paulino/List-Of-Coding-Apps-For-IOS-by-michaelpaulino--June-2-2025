@@ -1,4 +1,4 @@
-![IMG_5660](https://github.com/user-attachments/assets/bcd3f4cd-9097-4eb0-a3bb-c3eab5062f84)
+
 # List-Of-Coding-Apps-For-IOS-by-michaelpaulino--June-2-2025
 List or #ontology of Data site for doing on Apple iOS #siliconvalley #coding #data #apex2025 #mi6paulino
 1= https://shinylive.io/py/examples/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMAHgEEATGASwgAIA+N1KAZ15oBZZoQAWUOABseAV0mtibAFIyIcNgCZNABg0BWDgB0IAYjYYLbNAH0ZzNgF42drFADmcawDNJdhgAoXFjEJaSg5BX9DMBYANmiASgTjBjgvNl44ACcAN2y2KPY2YoAVKCyPMjY8NhNiGTJUBurarLgoQjJmPLZjBMRjYuLU9LaCjW1tZKLigAE42XkIYkGhtrIZLPZWJrIMACNiYklV4pMLDDAAXwBdIA
@@ -11,5 +11,5 @@ https://alien-signal-quantum-pro-michaelpaulino.postman.co/workspace/1e333291-3f
 6 = https://colab.research.google.com
 7 = 
 https://lilacai-lilac.hf.space/datasets#lilac/lmsys-chat-1m&nav=%7B%22expanded%22%3A%7B%22datasets.datasets.lilac%22%3Afalse%2C%22datasets.datasets%22%3Afalse%7D%7D&rowId=%220008898a2d88470a921ba3f04e2e637d%22
-8 = https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
-
+8 = https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.![IMG_5660](https://github.com/user-attachments/assets/bcd3f4cd-9097-4eb0-a3bb-c3eab5062f84)
+10 - https://burntfurniture.weebly.com
