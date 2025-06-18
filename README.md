@@ -15,3 +15,5 @@ https://lilacai-lilac.hf.space/datasets#lilac/lmsys-chat-1m&nav=%7B%22expanded%2
 [IMG_5660](https://github.com/user-attachments/assets/bcd3f4cd-9097-4eb0-a3bb-c3eab5062f84)
 10 - https://burntfurniture.weebly.com
 11- https://playcode.io/react
+
+12 - https://codetogo.io/how-to-add-item-to-array-in-javascript/
