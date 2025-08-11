@@ -1,0 +1,191 @@
+https://grok.com
+
+// Enhanced JavaScript code with advanced encryption and secure data handling
+// Integrates Web Crypto API, HMAC for integrity, and XSS prevention
+// For educational purposes only; demonstrates robust security practices
+
+// Assumes DOMPurify and sjcl (Stanford JavaScript Crypto Library) for additional crypto utilities
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+// <script src="https://bitwiseshiftleft.github.io/sjcl/sjcl.js"></script>
+const DOMPurify = window.DOMPurify;
+
+// Generate AES-GCM key for encryption
+async function generateKey() {
+    return await window.crypto.subtle.generateKey(
+        {
+            name: "AES-GCM",
+            length: 256
+        },
+        true,
+        ["encrypt", "decrypt"]
+    );
+}
+
+// Generate HMAC key for integrity verification
+async function generateHmacKey() {
+    return await window.crypto.subtle.generateKey(
+        {
+            name: "HMAC",
+            hash: { name: "SHA-256" }
+        },
+        true,
+        ["sign", "verify"]
+    );
+}
+
+// Encrypt data with AES-GCM
+async function encryptData(data, key) {
+    const encoder = new TextEncoder();
+    const iv = window.crypto.getRandomValues(new Uint8Array(12));
+    const encrypted = await window.crypto.subtle.encrypt(
+        {
+            name: "AES-GCM",
+            iv: iv
+        },
+        key,
+        encoder.encode(data)
+    );
+    return {
+        iv: Array.from(iv),
+        encrypted: Array.from(new Uint8Array(encrypted))
+    };
+}
+
+// Compute HMAC for data integrity
+async function computeHmac(data, hmacKey) {
+    const encoder = new TextEncoder();
+    const signature = await window.crypto.subtle.sign(
+        {
+            name: "HMAC"
+        },
+        hmacKey,
+        encoder.encode(data)
+    );
+    return Array.from(new Uint8Array(signature));
+}
+
+// Verify HMAC
+async function verifyHmac(data, hmacKey, signature) {
+    const encoder = new TextEncoder();
+    return await window.crypto.subtle.verify(
+        {
+            name: "HMAC"
+        },
+        hmacKey,
+        new Uint8Array(signature),
+        encoder.encode(data)
+    );
+}
+
+// Decrypt data
+async function decryptData(encryptedObj, key) {
+    const decoder = new TextDecoder();
+    const iv = new Uint8Array(encryptedObj.iv);
+    const data = new Uint8Array(encryptedObj.encrypted);
+    const decrypted = await window.crypto.subtle.decrypt(
+        {
+            name: "AES-GCM",
+            iv: iv
+        },
+        key,
+        data
+    );
+    return decoder.decode(decrypted);
+}
+
+// Advanced input validation and sanitization
+function validateAndSanitizeInput(input) {
+    // Strict regex: alphanumeric, spaces, and limited punctuation
+    const regex = /^[a-zA-Z0-9\s.,!?@#()-]*$/;
+    if (!regex.test(input)) {
+        throw new Error("Invalid input detected");
+    }
+    // Sanitize with DOMPurify, stripping all tags and attributes
+    const sanitized = DOMPurify.sanitize(input, { ALLOWED_TAGS: [], ALLOWED_ATTR: [] });
+    if (!sanitized) {
+        throw new Error("Sanitization failed");
+    }
+    return sanitized;
+}
+
+// Simulated secure storage (e.g., IndexedDB or server-side)
+class SecureStorage {
+    constructor() {
+        this.store = new Map();
+    }
+
+    async save(id, encryptedData, hmac) {
+        this.store.set(id, { encryptedData, hmac, timestamp: Date.now() });
+    }
+
+    async retrieve(id) {
+        return this.store.get(id);
+    }
+}
+
+// Process and store prediction data securely
+async function processPrediction(input) {
+    try {
+        // Validate and sanitize input
+        const sanitizedInput = validateAndSanitizeInput(input);
+
+        // Generate keys
+        const aesKey = await generateKey();
+        const hmacKey = await generateHmacKey();
+
+        // Encrypt data
+        const encryptedData = await encryptData(sanitizedInput, aesKey);
+
+        // Compute HMAC for integrity
+        const hmac = await computeHmac(sanitizedInput, hmacKey);
+
+        // Store in simulated secure storage
+        const storage = new SecureStorage();
+        const predictionId = `pred_${Date.now()}`;
+        await storage.save(predictionId, encryptedData, hmac);
+
+        // Retrieve and verify
+        const stored = await storage.retrieve(predictionId);
+        if (!stored) {
+            throw new Error("Storage retrieval failed");
+        }
+
+        // Verify HMAC
+        const isValid = await verifyHmac(sanitizedInput, hmacKey, stored.hmac);
+        if (!isValid) {
+            throw new Error("Data integrity check failed");
+        }
+
+        // Decrypt for authorized access
+        const decrypted = await decryptData(stored.encryptedData, aesKey);
+
+        // Securely render to DOM
+        const outputElement = document.getElementById('output');
+        if (outputElement) {
+            outputElement.textContent = decrypted; // Use textContent to avoid XSS
+        }
+
+        console.log('Processed Prediction:', { id: predictionId, decrypted });
+        return predictionId;
+    } catch (error) {
+        console.error('Error:', error.message);
+        throw error;
+    }
+}
+
+// Content Security Policy (add to HTML <head>)
+/*
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdnjs.cloudflare.com bitwiseshiftleft.github.io; style-src 'self';">
+*/
+
+// Example usage with error handling
+(async () => {
+    try {
+        const userInput = "<script>alert('XSS attempt');</script>Safe Prediction Data";
+        const predictionId = await processPrediction(userInput);
+        console.log('Prediction ID:', predictionId);
+    } catch (error) {
+        console.error('Failed to process prediction:', error);
+    }
+})();
+```​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
