@@ -1,0 +1,96 @@
+Coding on an iOS device, such as an iPad, can be quite convenient, especially with the right tools and environments. Here are some codespaces and platforms that allow you to code on iOS devices:
+
+
+
+
+GitHub Codespaces:
+
+
+
+Description: GitHub Codespaces provides a cloud-based development environment that can be accessed via a web browser. It offers a full-featured Visual Studio Code experience directly in the browser, making it a powerful tool for coding on an iPad.
+
+Usage: You can create and manage Codespaces directly from your GitHub repositories. It supports various programming languages and frameworks, and you can customize your development environment using a devcontainer.json file.
+
+Access: Accessible via Safari or other browsers on your iPad. You can also add the Codespace to your home screen for easier access.
+
+Links: GitHub Codespaces, Using GitHub Codespaces on iPad .
+
+
+
+
+Replit:
+
+
+
+Description: Replit is an online IDE that supports a wide range of programming languages. It allows you to write, run, and share code directly from your browser.
+
+Usage: Ideal for quick coding sessions and educational purposes. It provides a collaborative environment where you can work with others in real-time.
+
+Access: Available through the Replit website or the Replit app on the App Store.
+
+Links: Replit
+
+
+
+
+CodeSandbox:
+
+
+
+Description: CodeSandbox is an online code editor and prototyping tool. It is particularly popular for web development and supports a variety of frameworks and libraries.
+
+Usage: Great for front-end development and prototyping. It provides a quick setup and easy sharing of projects.
+
+Access: Accessible via a web browser on your iPad.
+
+Links: CodeSandbox
+
+
+
+
+Pythonista:
+
+
+
+Description: Pythonista is a Python IDE for iOS that allows you to write and run Python scripts directly on your iPad or iPhone.
+
+Usage: Suitable for Python development, including scripting and automation tasks.
+
+Access: Available on the App Store.
+
+Links: Pythonista
+
+
+
+
+Blink Shell:
+
+
+
+Description: Blink Shell is a terminal emulator for iOS that supports Mosh, SSH, and other command-line tools. It can be paired with cloud-based development environments for a more robust coding experience.
+
+Usage: Useful for accessing remote servers and running command-line tools. It can be used alongside GitHub Codespaces for a more terminal-centric workflow.
+
+Access: Available on the App Store.
+
+Links: Blink Shell, Coding on an iPad with Codespaces and Blink .
+
+
+
+
+Termius:
+
+
+
+Description: Termius is an SSH client that allows you to connect to remote servers and manage them from your iOS device.
+
+Usage: Ideal for system administrators and developers who need to manage remote servers.
+
+Access: Available on the App Store.
+
+Links: Termius
+
+
+
+
+These tools and platforms provide a range of options for coding on an iOS device, from full-featured cloud-based IDEs to specialized terminal emulators and SSH clients. Depending on your specific needs and workflow, you can choose the one that best fits your requirements.
