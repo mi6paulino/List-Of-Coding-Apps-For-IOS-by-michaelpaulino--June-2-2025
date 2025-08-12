@@ -37,3 +37,7 @@ https://grok.com
 
 
 https://replit.com/~
+
+// 
+18
+https://jsfiddle.net
