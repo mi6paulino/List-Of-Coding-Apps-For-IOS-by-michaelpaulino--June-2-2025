@@ -94,3 +94,32 @@ Links: Termius
 
 
 These tools and platforms provide a range of options for coding on an iOS device, from full-featured cloud-based IDEs to specialized terminal emulators and SSH clients. Depending on your specific needs and workflow, you can choose the one that best fits your requirements.
+
+
+//
+CodePen: An online code editor and community for front-end web development using HTML, CSS, and JavaScript. It allows you to build, share, and learn code snippets and projects directly in your browser.
+
+
+
+
+ICEcoder: A browser-based code editor that allows you to code directly within the web browser, both online and offline. It supports testing on actual web servers and can be customized to integrate with online services.
+
+
+
+
+CodeMirror: A versatile code editor component for the web that supports syntax highlighting, code folding, and various programming languages. It is open-source and can be easily embedded in any web page or JavaScript application.
+
+
+
+
+PlayCode: An all-purpose online code editor that allows you to open multiple files and run them together in a single project. It offers premade templates, real-time results, and built-in console debugging. Users can edit and work without being signed in.
+
+
+
+
+Ace: An embeddable code editor written in JavaScript that matches the features and performance of native editors like Sublime, Vim, and TextMate. It can be easily embedded in any web page and supports syntax highlighting for a wide range of languages.
+
+
+
+
+These editors provide a range of features and can be used directly in your browser without the need for signing in, making them convenient for quick coding tasks and learning.
