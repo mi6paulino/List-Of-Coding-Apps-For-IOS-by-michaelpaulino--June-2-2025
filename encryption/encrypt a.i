@@ -1,6 +1,6 @@
 To develop an advanced application like VIGI A.I, which involves crime prediction and cyber crime prevention, it's crucial to use encrypted databases to protect sensitive information. Below are some examples and methods for using encrypted databases in your application.
 
-
+#60015673X
 Encrypted Database Examples
 
 1. SQL Server with Always Encrypted
