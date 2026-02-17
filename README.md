@@ -1,5 +1,5 @@
 ![IMG_6511](https://github.com/user-attachments/assets/8ecf0535-f595-40c2-81d5-64362169accd)
-1
+1 _
 # List-Of-Coding-Apps-For-IOS-by-michaelpaulino--June-2-2025
 List or #ontology of Data site for doing on Apple iOS #siliconvalley #coding #data #apex2025 #mi6paulino
 https://shinylive.io/py/examples/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMAHgEEATGASwgAIA+N1KAZ15oBZZoQAWUOABseAV0mtibAFIyIcNgCZNABg0BWDgB0IAYjYYLbNAH0ZzNgF42drFADmcawDNJdhgAoXFjEJaSg5BX9DMBYANmiASgTjBjgvNl44ACcAN2y2KPY2YoAVKCyPMjY8NhNiGTJUBurarLgoQjJmPLZjBMRjYuLU9LaCjW1tZKLigAE42XkIYkGhtrIZLPZWJrIMACNiYklV4pMLDDAAXwBdIA
